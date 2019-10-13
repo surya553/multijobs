@@ -5,22 +5,19 @@ pipeline {
             steps {    
                 git url: 'https://github.com/surya553/multijobs.git'
             }
-        }   
+        }  
+        stage("choose job"){   
+            steps{
+                properties([parameters([choice(choices: ['angular', 'maven'], description: '', name: 'select the job')])])
+            }
+        }
         stage(" change directory"){
             steps{
                 dir ('angular') {
                 sh 'pwd'
                } 
             }
-        }    
-        stage("check file exists"){    
-            if (fileExists(file: 'Jenkinsfile')) {
-                echo 'Yes'
-            } else {
-                echo 'No'
-            }
-        } 
+        }     
     }
 }
-
 
