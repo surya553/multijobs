@@ -11,8 +11,8 @@ pipeline {
         }  
         stage("choose job"){ 
             steps { 
-                dir "${params.angular}" {
-                    sh "echo ${params.angular}"
+                dir  "${params.select the job}" {
+                    sh "pwd"
                 } 
             }
         }     
