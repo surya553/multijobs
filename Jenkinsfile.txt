@@ -11,18 +11,20 @@ pipeline {
         }  
         stage("changing the directory"){ 
             steps { 
-                dir("$pwd/${params.'select the job for changing directory'}") {
+                dir("$pwd/workspace/${params.'select the job for changing directory'}") {
                     sh "pwd"
                 } 
             }
         } 
         stage("loading jenkins file") {
             steps {
-                validateDeclarativePipeline "$pwd/${params.'select the job for changing directory'}/Jenkinsfile.txt"
+                validateDeclarativePipeline "$pwd/workspace${params.'select the job for changing directory'}/Jenkinsfile.txt"
             }
         }    
     }
 }
+
+
 
 
 
