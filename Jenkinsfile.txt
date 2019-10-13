@@ -14,13 +14,13 @@ pipeline {
             }
         }    
         stage("check file exists"){    
-            steps{
-                if (fileExists(file: 'Jenkinsfile')) {
+            if (fileExists(file: 'Jenkinsfile')) {
                 echo 'Yes'
-                } else {
+            } else {
                 echo 'No'
-                }
-            }   
+            }
         } 
     }
 }
+
+
