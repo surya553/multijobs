@@ -3,12 +3,12 @@ pipeline {
     stages {    
         stage("git checkout") {
             steps {    
-                git 'https://github.com/weaverj/testpyramidexample.git'
+                git https://github.com/surya553/multijobs.git
             }
         }   
         stage(" change directory"){
             steps{
-                dir ('rxdemo-ui') {
+                dir ('angular') {
                 sh 'pwd'
                }
             }   
