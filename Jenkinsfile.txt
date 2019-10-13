@@ -12,7 +12,12 @@ pipeline {
                 sh 'pwd'
                }
             }   
-        }   
+        } 
+        stage("check file) {
+            steps{
+                fileExists: 'var/lib/jenkins/workspace/surya/angular/Jenkinsfile'
+            }
+        }
     }
 }
 
