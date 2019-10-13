@@ -1,0 +1,10 @@
+node_modules
+.idea
+.DS_STORE
+/scripts/
+/redemo-ui.iml
+/Dockerfile
+/TESTS.xml
+/rxdemo-ui.zip
+/dist/
+/dist.zip
