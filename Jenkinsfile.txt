@@ -15,9 +15,16 @@ pipeline {
                     sh "pwd"
                 } 
             }
-        }     
+        } 
+        stage("loading jenkins file") {
+            steps {
+                load '/var/lib/jenkins/workspace/${params.\'select the job for changing directory\'}'
+            }
+        }    
     }
 }
+
+
 
 
 
