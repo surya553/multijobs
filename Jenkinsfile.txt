@@ -18,7 +18,7 @@ pipeline {
         } 
         stage("loading jenkins file") {
             steps {
-                load "/var/lib/jenkins/workspace/${params.'select the job for changing directory'}/Jenkinsfile.groovy"
+                load "/var/lib/jenkins/workspace/${params.'select the job for changing directory'}/Jenkinsfile"
             }
         }    
     }
