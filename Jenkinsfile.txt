@@ -11,12 +11,15 @@ pipeline {
         }  
         stage("choose job"){ 
             steps { 
-                dir  "${params.select the job}" {
+                dir('/var/lib/jenkins/workspace/"$(params.select the job)"') {
                     sh "pwd"
                 } 
             }
         }     
     }
 }
+
+
+
 
 
