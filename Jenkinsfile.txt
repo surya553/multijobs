@@ -2,6 +2,7 @@ pipeline {
     agent any
     parameters {
         choice(choices: ['angular', 'maven'],description: '', name: 'select the job')
+    }    
     stages {    
         stage("git checkout") {
             steps {    
