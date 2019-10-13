@@ -10,14 +10,13 @@ pipeline {
             steps{
                 dir ('angular') {
                 sh 'pwd'
-               }
-            }  
+               } 
+               if (fileExists('Jenkinsfile')) {
+                echo 'Yes'
+                } else {
+                echo 'No'
+                }
+            }   
         } 
-        stage("check file) {
-            steps{
-                fileExists: '/var/lib/jenkins/workspace/surya/angular/Jenkinsfile'
-            }
-        }
     }
 }
-
