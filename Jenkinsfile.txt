@@ -11,8 +11,6 @@ pipeline {
                 description: '', 
                 name: 'select the job')])
             ])
-        }
-        stage(" change directory"){
             steps{
                 dir ('angular') {
                 sh 'pwd'
@@ -21,7 +19,5 @@ pipeline {
         }     
     }
 }
-
-
 
 
