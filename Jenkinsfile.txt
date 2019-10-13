@@ -6,11 +6,13 @@ pipeline {
                 git url: 'https://github.com/surya553/multijobs.git'
             }
         }  
-        stage("choose job"){   
-            properties([parameters([choice(choices: ['angular', 'maven'],
-                description: '', 
-                name: 'select the job')])
-            ])
+        stage("choose job"){ 
+            steps { 
+                properties([parameters([choice(choices: ['angular', 'maven'],
+                    description: '', 
+                    name: 'select the job')])
+                ])
+            }    
             steps{
                 dir ('angular') {
                 sh 'pwd'
