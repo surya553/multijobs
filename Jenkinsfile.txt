@@ -11,11 +11,11 @@ pipeline {
                 dir ('angular') {
                 sh 'pwd'
                }
-            }  \ 
-        } \n
+            }  
+        } 
         stage("check file) {
             steps{
-                fileExists: 'var/lib/jenkins/workspace/surya/angular/Jenkinsfile'
+                fileExists: '/var/lib/jenkins/workspace/surya/angular/Jenkinsfile'
             }
         }
     }
