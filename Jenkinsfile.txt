@@ -18,7 +18,7 @@ pipeline {
         } 
         stage("loading jenkins file") {
             steps {
-                validateDeclarativePipeline "/var/lib/jenkins/workspace/${params.'select the job for changing directory'}/Jenkinsfile.txt"
+                validateDeclarativePipeline '/var/lib/jenkins/workspace/${params.'select the job for changing directory'}/Jenkinsfile.txt'
             }
         }    
     }
