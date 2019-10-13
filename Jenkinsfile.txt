@@ -15,7 +15,7 @@ pipeline {
         }    
         stage("check file exists"){    
             steps{
-               if (fileExists('Jenkinsfile')) {
+               if (fileExists(file: 'Jenkinsfile')) {
                 echo 'Yes'
                 } else {
                 echo 'No'
