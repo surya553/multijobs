@@ -11,12 +11,13 @@ pipeline {
         }  
         stage("changing the directory"){ 
             steps { 
-                dir(sh "pwd"/"$(params.select the job for changing directory)"') {
+                dir(/var/lib/jenkins/workspace/"$(params.select the job for changing directory)"') {
                     sh "pwd"
                 } 
             }
         }     
     }
 }
+
 
 
