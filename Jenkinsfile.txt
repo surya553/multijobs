@@ -8,7 +8,10 @@ pipeline {
         }  
         stage("choose job"){   
             steps{
-                properties([parameters([choice(choices: ['angular', 'maven'], description: '', name: 'select the job')])])
+                properties([parameters([choice(choices: ['angular', 'maven'],
+                    description: '', 
+                    name: 'select the job')])
+                ])
             }
         }
         stage(" change directory"){
@@ -20,4 +23,3 @@ pipeline {
         }     
     }
 }
-
