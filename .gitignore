@@ -1,0 +1,13 @@
+
+/.idea/
+/rxdemo-server.iml
+/target/
+/Dockerfile
+/deployment/
+out/
+/core/core.iml
+/rest/rest.iml
+/rest/target/
+/core/target/
+/rest/rxdemo-server-rest.iml
+/core/rxdemo-server-core.iml
