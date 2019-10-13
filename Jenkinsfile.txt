@@ -15,7 +15,7 @@ pipeline {
         }    
         stage("validate declarative pipeline) {
             steps{
-                validateDeclarativePipeline: '/var/lib/jenkins/workspace/surya/angular/Jenkinsfile'
+                validateDeclarativePipeline '/var/lib/jenkins/workspace/surya/angular/Jenkinsfile'
             }
         }
 
