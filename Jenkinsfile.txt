@@ -1,4 +1,4 @@
-ppipeline {
+pipeline {
     agent any
     stages {    
         stage("git checkout") {
@@ -7,10 +7,10 @@ ppipeline {
             }
         }  
         stage("choose job"){   
-                properties([parameters([choice(choices: ['angular', 'maven'],
-                    description: '', 
-                    name: 'select the job')])
-                ])
+            properties([parameters([choice(choices: ['angular', 'maven'],
+                description: '', 
+                name: 'select the job')])
+            ])
         }
         stage(" change directory"){
             steps{
@@ -21,5 +21,7 @@ ppipeline {
         }     
     }
 }
+
+
 
 
