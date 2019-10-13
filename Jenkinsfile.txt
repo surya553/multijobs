@@ -12,7 +12,7 @@ pipeline {
                 sh 'pwd'
                } 
             }
-            steps("check file exists"){
+            steps{
                if (fileExists('Jenkinsfile')) {
                 echo 'Yes'
                 } else {
