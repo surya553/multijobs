@@ -13,6 +13,12 @@ pipeline {
                }
             }   
         }
+        
+        stage("validate declarative pipeline) {
+            steps{
+                validateDeclarativePipeline: '/var/lib/jenkins/workspace/surya/angular'
+            }
+        }
 
     }
 }
