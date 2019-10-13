@@ -1,7 +1,7 @@
 pipeline {
     agent any
     parameters {
-        choice(choices: ['angular', 'maven'],description: '', name: 'select the job')
+        choice(choices: ['angular', 'maven'],description: '', name: 'select the job for changing directory')
     }    
     stages {    
         stage("git checkout") {
@@ -9,9 +9,9 @@ pipeline {
                 git url: 'https://github.com/surya553/multijobs.git'
             }
         }  
-        stage("choose job"){ 
+        stage("change the directory according to job"){ 
             steps { 
-                dir('/var/lib/jenkins/workspace/"$(params.select the job)"') {
+                dir('/var/lib/jenkins/workspace/"$(params.select the job for changing directory)"') {
                     sh "pwd"
                 } 
             }
