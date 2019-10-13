@@ -9,17 +9,14 @@ pipeline {
                 git url: 'https://github.com/surya553/multijobs.git'
             }
         }  
-        stage("change the directory according to job"){ 
+        stage("changing the directory"){ 
             steps { 
-                dir('/var/lib/jenkins/workspace/"$(params.select the job for changing directory)"') {
+                dir(sh "pwd"/"$(params.select the job for changing directory)"') {
                     sh "pwd"
                 } 
             }
         }     
     }
 }
-
-
-
 
 
