@@ -11,6 +11,8 @@ pipeline {
                 dir ('angular') {
                 sh 'pwd'
                } 
+            }
+            steps("check file exists"){
                if (fileExists('Jenkinsfile')) {
                 echo 'Yes'
                 } else {
