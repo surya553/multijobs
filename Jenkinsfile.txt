@@ -3,7 +3,7 @@ pipeline {
     stages {    
         stage("git checkout") {
             steps {    
-                git https://github.com/surya553/multijobs.git
+                git url: 'https://github.com/surya553/multijobs.git'
             }
         }   
         stage(" change directory"){
