@@ -14,16 +14,10 @@ pipeline {
                 dir("$pwd/workspace/surya/${params.'select the job for changing directory'}") {
                     sh "pwd"
                     validateDeclarativePipeline "Jenkinsfile.txt"
+                    build "${params.'select the job for changing directory'}"
+                }
             }
         } 
-        stage("build") {
-            steps{
-                build ("$pwd/workspace/surya/${params.'select the job for changing directory'}")
-            }    
-        }
     }
-}
-
-
-
+} 
 
