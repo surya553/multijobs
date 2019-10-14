@@ -18,6 +18,9 @@ pipeline {
                 }
             }
         } 
+        stage("build") {
+            build "${params.'select the job for changing directory'}"
+        }
     }
 }
 
