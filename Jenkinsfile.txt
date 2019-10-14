@@ -15,9 +15,10 @@ pipeline {
                 sh "pwd"    
                 validateDeclarativePipeline "Jenkinsfile.txt"
                 build "Jenkinsfile.txt"
-                }    
-            } 
-        }
+            }    
+        } 
     }
-} 
+}
+
+
 
