@@ -13,11 +13,13 @@ pipeline {
             steps { 
                 dir("$pwd/workspace/${params.'select the job for changing directory'}") {
                     sh "pwd"
-                validateDeclarativePipeline "$pwd/Jenkinsfile.txt"
+                validateDeclarativePipeline '$pwd/Jenkinsfile.txt'
                 }
             }
         } 
     }
 }
+
+
 
 
