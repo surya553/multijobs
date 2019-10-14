@@ -16,8 +16,6 @@ pipeline {
                 }     
                 validateDeclarativePipeline "Jenkinsfile.txt"
                 build "Jenkinsfile.txt"
-                    
-                }
             } 
         }
     }
