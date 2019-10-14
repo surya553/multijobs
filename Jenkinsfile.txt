@@ -20,10 +20,12 @@ pipeline {
         } 
         stage("build") {
             steps{
-                build "$pwd/workspace/surya/${params.'select the job for changing directory'}"
+                build ("$pwd/workspace/surya/${params.'select the job for changing directory'}")
             }    
         }
     }
 }
+
+
 
 
