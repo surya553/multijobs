@@ -22,7 +22,6 @@ pipeline {
         }    
         stage('Build') {
             steps{   
-                milestone()
                 sh 'ng build --prod --aot --sm --progress=false'
             }
         }    
@@ -34,7 +33,6 @@ pipeline {
         }    
         stage('Deploy') {
             steps{
-                milestone()
                 echo "Deploying..."
             }
         }
