@@ -13,12 +13,14 @@ pipeline {
             steps {
                 dir("$pwd/workspace/surya/${params.'select the job for changing directory'}") {
                     sh "pwd"  
-                      fileExists 'Jenkinsfile.txt'
-                      build '/Jenkinsfile.txt'
+                    fileExists 'Jenkinsfile.txt'
+                    build '/Jenkinsfile.txt'
                 }    
             } 
         }
     }
 }    
+
+    
 
 
