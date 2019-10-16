@@ -14,7 +14,7 @@ pipeline {
                 dir("$pwd/workspace/surya/${params.'select the job for changing directory'}") {
                     sh "pwd"  
                     fileExists 'Jenkinsfile.txt'
-                    readFile "Jenkinsfile.txt"
+                    readFile "/Jenkinsfile.txt"
                 }    
             } 
         }
